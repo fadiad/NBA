@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Player</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="./jquery/dist/jquery.js"></script>
+    <script src="./handlebars/dist/handlebars.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="input-container">
+        <input type="text" placeholder="Type Team Name">
+        <button id="search-btn">Search <i class="fab fa-android"></i> </button>
+        <button id="DreamTeam-btn">Dream Team</button>
+    </div>
+
+    <div id="results">
+        <p>input should not be empty</p>
+    </div>
+
+    <script id="players-template" type="text/x-handlebars">
+        {{#each players}}
+        <div class = "player">
+            <h2>{{fname}} {{lname}}</h2>
+            <p>{{number}}</p>
+            <p>{{pos}}</p>
+            <img src="{{url}}" alt="">
+        </div>
+        {{/each}}
+    </script>
+
+    <script src="Render.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
